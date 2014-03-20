@@ -18,6 +18,10 @@ class CreateEmployees < ActiveRecord::Migration
       new_employee.save
     end
 
+    Sale.find_each do |sale|
+      names = sale.name.split
+      Employee.find_or_create_by({first_name: names[0], last_name: names[1]})
+    end
 
 
   end

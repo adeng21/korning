@@ -1,0 +1,22 @@
+<h1><%=@customers.name%></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Account Number</th>
+      <th>Website</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+      <tr>
+        <td><%= @customers.name %></td>
+        <td><%= @customers.account_number %></td>
+        <td><%= @customers.website %></td>
+      </tr>
+
+  </tbody>
+</table>
+</html>

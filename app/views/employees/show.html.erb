@@ -1,21 +1,31 @@
-<h1>Employees</h1>
+<h1><%= @employees.first_name %></h1>
+<h1><%= @employees.last_name %></h1>
+<h1><%= @employees.email %></h1>
 
 <table>
   <thead>
     <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Email</th>
+      <th>Sale Date</th>
+      <th>Sale Amount</th>
+      <th>Units Sold</th>
+      <th>Unit Price</th>
+      <th>Invoice No.</th>
+      <th>Invoice Frequency</th>
     </tr>
   </thead>
 
   <tbody>
 
+      <% @employee_id.each do |employee| %>
       <tr>
-        <td><%= @employees.first_name %></td>
-        <td><%= @employees.last_name %></td>
-        <td><%= @employees.email %></td>
+        <td><%= employee.sale_date %></td>
+        <td><%= employee.sale_amount %></td>
+        <td><%= employee.units_sold %></td>
+        <td><%= employee.unitprice %></td>
+        <td><%= employee.invoice_no %></td>
+        <td><%= employee.invoice_frequency %></td>
       </tr>
+      <% end %>
 
   </tbody>
 </table>

@@ -6,6 +6,7 @@ class EmployeesController < ApplicationController
 
   def show
     @employees = Employee.find(params[:id])
+    @employee_id = Employee.sales(params[:id])
   end
 
 
